@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stribeladen</title>
+    <meta name="description" content="Stribeladen comic-book shop in Aarhus">
+    <meta name="keywords" content="comic, comic-books, stories, store, comicstore, books, art, drawing, paint, superhero, superman, batman, ironman, spiderman, tintin, detectives, dc, marvel, disney, dreamworks, anime, manga, how-to, learning, reading,  cartoons, illustration, digitalart, artist, sketch, webcomic, draw, artwook, fanart, comicstrip, sketchbook, characters, characterdesign, collections, comiccollections, cosplay, artbubble, comiccon, costume, graphicnovel, digital, universe, fantasy, xmen
+    danish, international, denmark">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img class="logomobil" src="img/logomobil.png" alt="logo"></a>
+        <a href="index.html"><img class="logodesktop" src="img/logodesktop.png" alt="logo"></a>
+        <a href="genre.html"><img class="genrenav" src="img/genrenav.png" alt="genrenav"></a>
+        <a href="galleri.html"><img class="gallerinav" src="img/gallerinav.png" alt="gallerinav"></a>
+        <a href="newsandevents.html"><img class="newseventsnav" src="img/newseventsnav.png" alt="newseventsnav"></a>
+        <a href="omos.html"><img class="omosnav" src="img/omosnav.png" alt="omosnav"></a>
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="index.html">Forside</a>
+                <a href="genre.html">Genre</a>
+                <a href="galleri.html">Galleri</a>
+                <a href="newsandevents.html">News & Events</a>
+                <a href="omos.html">Om os</a>
+
+            </div>
+
+        </div>
+
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <span class="mobileicon" onclick="openNav()">&#9776</span>
+
+    </header>
+
+    <div class="wrapper">
+
+
+
+        <main id="frontpagemain">
+
+            <img id="frontpageimg" src="img/slideshow.jpg" alt="slides">
+
+            <section id="frontpage">
+                <article class="box">
+                    <a href="genre.html"><img id="genre" src="img/genre.png" alt="genre"></a>
+                </article>
+                <article class="box">
+                    <a href="galleri.html"><img id="galleri" src="img/gallerimobil.png" alt="galleri"></a>
+                </article>
+                <article class="box">
+                    <a href="omos.html"><img id="omos" src="img/omosmobil.png" alt="omos"></a>
+                </article>
+                <article class="box">
+                    <img id="folgos" src="img/folgos.png" alt="folgos"></a>
+                    <a id="instalink" href="https://www.instagram.com/stribeladen/" target="_blank"></a>
+                    <a id="fblink" href="https://www.facebook.com/stribeladen/" target="_blank"></a>
+                </article>
+                <article class="box">
+                    <a href="genre.html"><img id="genredesktop" src="img/genredesktop.png" alt="genre"></a>
+                </article>
+                <article class="box">
+                    <a href="galleri.html"><img id="galleridesktop" src="img/galleridesktop.png" alt="galleri"></a>
+                </article>
+                <article class="box">
+                    <a href="omos.html"><img id="omosdesktop" src="img/omosdesktop.png" alt="omos"></a>
+                </article>
+                <article class="box">
+                    <img id="folgosdesktop" src="img/folgosdesktop.png" alt="folgosdesktop"></a>
+                    <a id="instalinkdesktop" id="instalink" href="https://www.instagram.com/stribeladen/"
+                        target="_blank"></a>
+                    <a id="fblinkdesktop" id="fblink" href="https://www.facebook.com/stribeladen/" target="_blank"></a>
+                </article>
+            </section>
+        </main>
+
+    </div>
+
+    <br>
+    <br>
+
+
+
+    <div class="footer" id="footerfrontpage">
+        <footer>
+            <p class="stribeladen">Stribeladen</p>
+            <p class="address"><span class="material-symbols-outlined">location_on</span><a
+                    href="https://goo.gl/maps/WraTrfv7M8DrXjN9A" target="_blank">Jægergårdsgade 48, 8000 Århus C</a></p>
+            <p class="phone"><span class="material-symbols-outlined">call</span><a href="tel:+4586123080">Tlf:
+                    86123080</a>
+            </p>
+            <p class="mail"><span class="material-symbols-outlined">mail</span><a
+                    href="mailto:stribeladen@hotmail.com">stribeladen@hotmail.com</a></p>
+        </footer>
+    </div>
+
+</body>
+
+<script>
+    /* Open when someone clicks on the span element */
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+</html>

@@ -1,0 +1,842 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    color: #000000;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1;
+    *font-family: raleway;
+    font-size: 62.5%;
+    background-color: #363534;
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    padding-bottom: 6.74rem;
+    box-sizing: inherit;
+    
+    
+  }
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: comicshark;
+    src: url(/ComicShark.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Header*/
+
+header {
+
+
+    padding: 1.5%;
+    background-image: linear-gradient(#D44A35, #D46F62);
+    height: 2rem;
+}
+
+.logomobil {
+    position: relative;
+    left: 9rem;
+    bottom: 0.35rem;
+    width: 3.9rem;
+}
+
+.logodesktop {
+    width: 32rem;
+    position: relative;
+    top: -3rem;
+    left: -2rem;
+}
+
+.genrenav {
+    position: relative;
+    bottom: 5.5rem;
+}
+
+.gallerinav {
+    position: relative;
+    bottom: 5.5rem;
+    left: 8rem;
+}
+
+.newseventsnav {
+    position: relative;
+    bottom: 5.5rem;
+    left: 17rem;
+
+}
+
+.omosnav {
+    position: relative;
+    bottom: 5.2rem;
+    left: 27rem;
+}
+
+
+
+
+.mobileicon {
+    color: #ffffff;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 50;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/opacity */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    font-family: comicshark;
+    position: relative;
+    top: 25%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+
+
+    .overlay a {
+        font-size: 1rem
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+
+
+/*Main page*/
+.wrapper {
+    max-width: fit-content;
+}
+
+
+
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.box {
+    *position: relative;
+    top: -2rem;
+}
+
+#genre {
+    max-width: 100%;
+    position: relative;
+    top: 5.7rem;
+}
+
+
+#galleri {
+    max-width: 100%;
+    position: relative;
+    top: 2.65rem;
+}
+
+#omos {
+    max-width: 100%;
+    position: relative;
+    top: 1.3rem;
+}
+
+#folgos {
+    max-width: 100%;
+    *padding-bottom: 2rem;
+}
+
+#instalink {
+
+    position: absolute;
+    left: 10rem;
+    bottom: 2.5rem;
+    width: 2.5rem;
+    height: 1.5rem;
+}
+
+#fblink {
+
+    position: absolute;
+    left: 4.5rem;
+    bottom: 2.5rem;
+    width: 2.5rem;
+    height: 1.5rem;
+}
+
+
+
+
+/*Desktop*/
+
+#genredesktop {
+    position: relative;
+    top: 12rem;
+}
+
+#genredesktop:hover {
+    opacity: 80%;
+}
+
+#galleridesktop {
+    position: relative;
+    top: 7.7rem;
+}
+
+#galleridesktop:hover {
+    opacity: 80%;
+}
+
+#omosdesktop {
+    position: relative;
+    top: 3.5rem;
+}
+
+#omosdesktop:hover {
+    opacity: 80%;
+}
+
+#folgosdesktop {
+    position: relative;
+    left: 0.4rem;
+}
+
+#instalinkdesktop {
+
+    position: absolute;
+    bottom: 4rem;
+    right: 25rem;
+    width: 10rem;
+    height: 3rem;
+}
+
+#fblinkdesktop {
+
+    position: absolute;
+    bottom: 4rem;
+    right: 12rem;
+    width: 10rem;
+    height: 3rem;
+}
+
+.genremain {
+    display: flex;
+    align-items: center;
+
+}
+
+
+#marvelmain {
+    margin-top: 0.5rem;
+
+
+
+}
+
+#genrelogo {
+    max-width: 60%;
+}
+
+#marvellink {
+
+    position: absolute;
+    left: 16rem;
+    top: 12rem;
+    width: 16rem;
+    height: 12rem;
+}
+
+
+
+#disneylink {
+
+    position: absolute;
+    left: 39rem;
+    top: 23.5rem;
+    width: 25rem;
+    height: 10rem;
+}
+
+#dclink {
+
+    position: absolute;
+    left: 5rem;
+    top: 49.5rem;
+    width: 25rem;
+    height: 15rem;
+}
+
+#mangalink {
+
+    position: absolute;
+    left: 39rem;
+    top: 49.5rem;
+    width: 25rem;
+    height: 15rem;
+}
+
+
+/* ------ Images ------ */
+.blueimages {
+    width: 60%;
+    justify-content: center;
+
+
+
+}
+
+.redimages {
+    width: 100%;
+}
+
+.purpleimages {
+    width: 100%;
+}
+
+#whiteline {
+    width: 99%;
+    height: 0.3rem;
+    background-color: #ffffff;
+}
+
+.greenimages {
+    width: 100%;
+}
+
+
+
+
+
+#frontpageimg {
+    border: #f1f1f1 solid 6px;
+    width: 97%;
+    position: relative;
+    left: 0.5rem;
+
+}
+
+#frontpage {
+    position: relative;
+    bottom: 8rem;
+}
+
+
+
+
+
+/*Footer*/
+
+
+
+.stribeladen {
+    font-size: 1.5625rem;
+    text-align: center;
+    padding-top: 0.2rem;
+    font-weight: bold;
+}
+
+.address {
+    font-size: 1.125rem;
+    margin-top: 1rem;
+    text-align: center;
+
+}
+
+.address:hover {
+    text-decoration: underline;
+}
+
+.phone {
+    font-size: 1.125rem;
+    float: left;
+    margin-top: 0.625rem;
+    padding-left: 0.5rem;
+}
+
+.phone:hover {
+    text-decoration: underline;
+
+}
+
+.mail {
+    font-size: 1.125rem;
+    float: right;
+    margin-top: 0.625rem;
+    padding-right: 0.5rem;
+}
+
+.mail:hover {
+    text-decoration: underline;
+}
+
+
+/*Icons*/
+
+.material-symbols-outlined {
+    position: relative;
+    top: 0.3rem;
+}
+
+
+
+
+/*desktop*/
+
+
+@media screen and (min-width: 600px) {
+
+
+    header {
+        margin-top: 1.5rem;
+        height: 4rem;
+    }
+
+    .logomobil {
+        display: none;
+    }
+
+    .mobileicon {
+        display: none;
+    }
+
+    main {
+        position: relative;
+        top: 3rem;
+
+    }
+
+    #frontpagemain {
+        max-width: 60%;
+    }
+
+    #genre {
+        display: none;
+    }
+
+
+    .bluebox {
+        width: 100%;
+
+    }
+
+    #galleri {
+        display: none;
+    }
+
+    #omos {
+        display: none;
+    }
+
+    #folgos {
+        display: none;
+    }
+
+    #instalink {
+        display: none;
+    }
+
+    #fblink {
+        display: none;
+    }
+
+    .slideshow-container {
+        display: none;
+    }
+
+    .wrapper {
+        display: flex;
+        max-width: 1920px;
+
+        justify-content: center;
+    }
+
+
+    .greenimages {
+        width: 60%;
+
+
+
+    }
+
+    #newseventsmain {
+        display: flex;
+        align-items: center;
+    }
+
+
+
+    .purpleimages {
+        width: 35%;
+
+
+    }
+
+    .stribeladen {
+
+        position: relative;
+        top: 1rem;
+        font-weight: bold;
+    }
+
+    .phone {
+        font-size: 1.125rem;
+        float: left;
+        position: relative;
+        bottom: 2rem;
+        left: 5rem;
+    }
+
+    .mail {
+        font-size: 1.125rem;
+        float: right;
+        position: relative;
+        bottom: 2rem;
+        right: 5rem;
+    }
+
+    .adress {
+        font-size: 1.125rem;
+        position: relative;
+        bottom: -0.4rem;
+        text-align: center;
+    }
+
+    .footer {
+        background-image: linear-gradient(#D46F62, #D44A35);
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -3rem;
+        font-family: poppins;
+        width: 100%;
+
+    }
+
+    #firkanter {
+        display: none;
+    }
+
+    .gallerimain {
+        display: flex;
+        align-items: center;
+
+    }
+
+    #velkommen {
+        display: none;
+    }
+
+    #velkommendesktop {
+        max-width: 60%;
+    }
+
+    #kontaktos {
+        display: none;
+    }
+
+    #kontaktosdesktop {
+        max-width: 60%;
+    }
+
+    #omosmobile {
+        display: none;
+    }
+
+    #omosdesktop1 {
+        max-width: 60%;
+    }
+
+    #omosmain {
+        display: flex;
+        align-items: center;
+    }
+
+    #map {
+        max-width: 60%;
+    }
+
+    #maplink {
+
+        width: 7.5rem;
+        height: 7rem;
+        position: absolute;
+        bottom: 2rem;
+        left: 19rem;
+
+    }
+
+    #marvelmain {
+        max-width: 60%;
+        align-items: center;
+        margin-bottom: 1rem;
+
+
+    }
+
+    #marveltitle {
+        max-width: 60%;
+    }
+
+    #marvelarticle {
+        max-width: 60%;
+    }
+
+    #whiteline {
+        max-width: 35%;
+
+    }
+
+}
+
+
+
+/*Mobile*/
+
+
+@media screen and (max-width: 600px) {
+
+    .genrenav {
+        display: none;
+    }
+
+    .gallerinav {
+        display: none;
+    }
+
+    .newseventsnav {
+        display: none;
+    }
+
+    #frontpage {
+        position: relative;
+        bottom: 4rem;
+    }
+
+    #frontpageimg {
+        position: relative;
+        left: -0.05rem;
+        margin-top: 1rem;
+
+    }
+
+    .omosnav {
+        display: none;
+    }
+
+    .logodesktop {
+        display: none;
+    }
+
+    #genredesktop {
+        display: none;
+    }
+
+    #galleridesktop {
+        display: none;
+    }
+
+    #omosdesktop {
+        display: none;
+    }
+
+    #folgosdesktop {
+        display: none;
+    }
+
+    .slideshow-container {
+        display: none;
+    }
+
+    .blueimages {
+        width: 100%;
+    }
+
+    #marvellink {
+        position: absolute;
+
+        width: 9rem;
+        height: 8rem;
+        top: 11rem;
+        left: 2rem;
+    }
+
+    #marvelmain {
+
+        max-width: 100%;
+    }
+
+    #disneylink {
+        display: none;
+    }
+
+    #dclink {
+        display: none;
+    }
+
+    #mangalink {
+        display: none;
+    }
+
+    .footer {
+        background-image: linear-gradient(#D46F62, #D44A35);
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        font-family: poppins;
+        padding: 0 0 1rem;
+        margin-top: 5rem;
+    }
+
+    #footerfrontpage {
+        position: absolute;
+        bottom: -1rem;
+        font-weight: normal;
+
+    }
+
+    #firkanterdesktop {
+        display: none;
+    }
+
+
+    #omosdesktop1 {
+        display: none;
+    }
+
+    #kontaktosdesktop {
+        display: none;
+    }
+
+    #velkommendesktop {
+        display: none;
+    }
+
+    #map {
+        display: none;
+    }
+
+    #marveltitle {
+        max-width: 100%;
+    }
+
+    #marvelarticle {
+        max-width: 100%;
+    }
+
+
+    #genrelogo {
+        max-width: 100%;
+    }
+
+}
